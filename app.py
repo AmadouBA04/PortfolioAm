@@ -14,7 +14,7 @@ def get_base64_img(img_path):
 st.set_page_config(page_title="Portfolio - Amadou BA", page_icon="📊", layout="wide")
 
 # Charger l'image depuis le dossier Amou
-img_base64 = get_base64_img("Amou/OIP2.webp")
+img_base64 = get_base64_img("Amou/oip2.webp")
 
 # Appliquer en arrière-plan uniquement si l'image est trouvée
 if img_base64:
@@ -63,8 +63,8 @@ Passionné par la transformation des données en informations stratégiques, je 
     st.markdown("### Photo")
     col1, col2 = st.columns(2)
     with col1:
-        if os.path.exists("Amou/IMG_E0749.jpg"):
-            st.image("Amou/IMG_E0749.jpg", caption="Amadou BA", width=250)
+        if os.path.exists("Amou/img_e0749.jpg"):
+            st.image("Amou/img_e0749.jpg", caption="Amadou BA", width=250)
 # Section : Compétences
 elif menu == "Compétences":
     st.title("🛠️ Compétences techniques")
@@ -81,42 +81,47 @@ elif menu == "Compétences":
     
     st.header("📄 Projet Traitement des donnees, DATA Mining, Econometrie et Actuariat")
     if st.checkbox("📖 Afficher le document du Projet", key="DPTDMEA"):
-        afficher_pdf("Amou/Examen DATA Maning NGOM DAPSA Groupe 3.pdf")
+        afficher_pdf("Amou/examen_data_maning_ngom_dapsa.pdf")
         
     st.header("📄 Projet Modèles Linéaires Généralisés (GLM) sur Données Réelles")
     if st.checkbox("📖 Afficher le document du Projet", key="DPMLG"):
-        afficher_pdf("Amou/Examen MLG Amadou BA.pdf")
+        afficher_pdf("Amou/examen_mlg_amadou_ba.pdf")
 
     st.header("📄 Projet Intégration de Données Applications aux entrepôts de données")
     if st.checkbox("📖 Afficher le document du Projet", key="DPI"):
-        afficher_pdf("Amou/Projet Examen Integration de Données #.pdf")
+        afficher_pdf("Amou/projet_examen_Integration_de_Données.pdf")
 
     st.header("📄 Projet Séries temporelles")
     if st.checkbox("📖 Afficher le document du Projet", key="DPST"):
-        afficher_pdf("Amou/SerieTemporelleAbaDIOP BA.pdf")
+        afficher_pdf("Amou/serie_temporelle_aba_diop.pdf")
         
     st.header("📄 Projet Mesure et probabilité")
     if st.checkbox("📖 Afficher le document du Projet", key="DPMP"):
-        afficher_pdf("Amou/Projet Mesure et probabilité.pdf")
+        afficher_pdf("Amou/projet_mesure_et_probabilité.pdf")
     
     st.header("📄 Projet Methode classification")
     if st.checkbox("📖 Afficher le document du Projet", key="DPMC"):
-        afficher_pdf("Amou/PROJET FINAL METHODES DE CLASSIFICATION.pdf")
+        afficher_pdf("Amou/projet_methode_classification.pdf")
 
     st.header("📄 Projet Linux et Reseau")
     if st.checkbox("📖 Afficher le document du Projet", key="DPLR"):
-        afficher_pdf("Amou/Document presentation linux reseau Amadou BA et Mahmoud SIDIBE.pdf")
+        afficher_pdf("Amou/document_presentation_linux_reseau_amadou_ba.pdf")
 
 # Section : Parcours académique
 elif menu == "Parcours académique":
     st.title("🎓 Parcours académique")
+    ("- Certification en Entreprenariat Numerique (En cours)"),
+    ("- Certification en Informatique et internet (En cours)"),
+    ("- Certification en Markting Digital (En cours)"),
+    ("- Certification en Commerce Digital (En cours)"),
     certificats = [
-        ("Certificat en Intelligence Artificielle pour tous", "Amou/Certificat IA Amadou BA ForceN.pdf", "cert_ia"),
-        ("Attestaion M1 SID", "Amou/Attestation M1 AmadouBA.pdf", "att_m1"),
-        ("Attestaion L3 SID", "Amou/Attestation L3 Amadou BA.pdf", "att_l3"),
-        ("Attestaion L2 SID", "Amou/Attestation passage L2 Amadou BA.pdf", "att_l2"),
-        ("Attestaion L1 SID", "Amou/Attestation passage L1 Amadou BA.pdf", "att_l1"),
-        ("Attestaion BAC S2", "Amou/Attestation du BAC.pdf", "att_bac")
+        ("Ceritficat d'inscription M2 SID", "Amou/Certificat_inscription_m2sid_amadou_ba.pdf", "cert_m2"),
+        ("Certificat en Intelligence Artificielle pour tous", "Amou/certificat_ia_amadou_ba_forcen.pdf", "cert_ia"),
+        ("Attestaion M1 SID", "Amou/attestation_m1_amadou_ba.pdf", "att_m1"),
+        ("Attestaion L3 SID", "Amou/attestation_l3_amadou_ba.pdf", "att_l3"),
+        ("Attestaion L2 SID", "Amou/attestation_passage_l2_amadou_ba.pdf", "att_l2"),
+        ("Attestaion L1 SID", "Amou/attestation_passage_l1_amadou_ba.pdf", "att_l1"),
+        ("Attestaion BAC S2", "Amou/attestation_du_bac.pdf", "att_bac")
     ]
     for titre, path, key in certificats:
         st.header(f"📄 {titre}")
@@ -125,7 +130,7 @@ elif menu == "Parcours académique":
 # Section : Expérience professionnelle
 elif menu == "Expérience professionnelle":
     st.title("💼 Expérience professionnelle")
-    st.subheader("🔹 Data Analyst - Hôpital Le Dantec (Dakar)")
+    st.subheader("🔹 Data Analyst - Hôpital Dakar")
     st.write("🗓️ Depuis décembre 2024")
     st.markdown("""
     - Analyse statistique et modélisation de données médicales  
@@ -142,7 +147,7 @@ elif menu == "Expérience professionnelle":
     """)
     st.header("📄 Memoire Licence L3 SID")
     if st.checkbox("📖 Afficher le rapport de memoire ", key="mrs"):
-        afficher_pdf("Amou/Memoire de licence de Amadou BA.pdf")
+        afficher_pdf("Amou/memoire_de_licence_de_amadou_ba.pdf")
 # Section : Contact
 elif menu == "Contact":
     st.title("📞 Contact")
@@ -151,7 +156,7 @@ elif menu == "Contact":
     st.write("[🔗 LinkedIn](https://www.linkedin.com/in/amadou-ba-b7b78625a)")
     st.header("📄 CV")
     if st.checkbox("📖 Afficher le CV", key="cv"):
-        afficher_pdf("Amou/CV_Amadou_BA.pdf")
+        afficher_pdf("Amou/cv_amadou_ba.pdf")
     st.header("📄 Lettre de motivation")
     if st.checkbox("📖 Afficher la lettre de motivation", key="lm"):
-        afficher_pdf("Amou/LM Amadou BA.pdf")
+        afficher_pdf("Amou/lm_amadou_ba.pdf")
