@@ -89,7 +89,7 @@ elif menu == "Compétences":
 
     st.header("📄 Projet Intégration de Données Applications aux entrepôts de données")
     if st.checkbox("📖 Afficher le document du Projet", key="DPI"):
-        afficher_pdf("Amou/projet_examen_Integration_de_Données.pdf")
+        afficher_pdf("Amou/projet_examen_integration_de_donnees.pdf")
 
     st.header("📄 Projet Séries temporelles")
     if st.checkbox("📖 Afficher le document du Projet", key="DPST"):
@@ -97,7 +97,7 @@ elif menu == "Compétences":
         
     st.header("📄 Projet Mesure et probabilité")
     if st.checkbox("📖 Afficher le document du Projet", key="DPMP"):
-        afficher_pdf("Amou/projet_mesure_et_probabilité.pdf")
+        afficher_pdf("Amou/projet_mesure_et_probabilite.pdf")
     
     st.header("📄 Projet Methode classification")
     if st.checkbox("📖 Afficher le document du Projet", key="DPMC"):
