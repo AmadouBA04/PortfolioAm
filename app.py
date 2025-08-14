@@ -35,9 +35,8 @@ if img_base64:
 def afficher_pdf(path):
     if os.path.exists(path):
         with open(path, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" type="application/pdf" width="100%" height="500px">'
-            st.markdown(pdf_display, unsafe_allow_html=True)
+            pdf_bytes = f.read()
+        st.download_button("📄 Télécharger le PDF", data=pdf_bytes, file_name=os.path.basename(path), mime="application/pdf")
     else:
         st.warning(f"Fichier non trouvé : {path}")
 # Navigation
@@ -63,8 +62,8 @@ Passionné par la transformation des données en informations stratégiques, je 
     st.markdown("### Photo")
     col1, col2 = st.columns(2)
     with col1:
-        if os.path.exists("Amou/img_e0749.jpg"):
-            st.image("Amou/img_e0749.jpg", caption="Amadou BA", width=250)
+        if os.path.exists("Amou/img_e0749.JPG"):
+            st.image("Amou/img_e0749.JPG", caption="Amadou BA", width=250)
 # Section : Compétences
 elif menu == "Compétences":
     st.title("🛠️ Compétences techniques")
